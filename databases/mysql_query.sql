@@ -27,6 +27,7 @@ CREATE TABLE IF NOT EXISTS `shopping-cart`.`product` (
   `pprice` DECIMAL(12,2) NULL DEFAULT NULL,
   `pquantity` INT NULL DEFAULT NULL,
   `image` LONGBLOB NULL DEFAULT NULL,
+  `discount` INT DEFAULT 0, --New for Discount
   PRIMARY KEY (`pid`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
@@ -237,4 +238,5 @@ USE `shopping-cart`;
 INSERT INTO `shopping-cart`.`usercart` (`username`, `prodid`, `quantity`) VALUES ('guest@gmail.com', 'P20230423082243', 2);
 
 COMMIT;
+
 
